@@ -27,7 +27,7 @@ int FindMostFrequent(int arr[], int size) {
 }
 
 int main() {
-    int input_array[] = {1, 3, 3, 3, 2, 1, 1, 1, 1, 2};
+    int input_array[] = {1, 3, 3, 3, 2, 3, 1, 3, 1, 2};
     int array_size = sizeof(input_array) / sizeof(input_array[0]);
 
     printf("Most frequent element is %d\n", FindMostFrequent(input_array, array_size));
