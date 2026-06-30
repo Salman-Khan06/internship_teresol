@@ -1,6 +1,5 @@
 // Name: Salman Khan
-// Date: 30 June 2026
-// Description: Find the most frequent element in an array of integers.
+// Find the most frequent element in an array of integers.
 
 #include <stdio.h>
 
@@ -18,7 +17,7 @@ int FindMostFrequent(int arr[], int size) {
             }
         }
         
-        // Update the most frequent element if current count is higher
+        
         if (current_count > max_count) {
             max_count = current_count;
             most_frequent = arr[i];

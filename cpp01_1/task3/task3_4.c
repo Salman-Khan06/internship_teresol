@@ -1,17 +1,17 @@
 // Name: Salman Khan
 // Date: 30 June 2026
-// Description: Find the largest element of a given array of integers.
+// Find the largest element of a given array of integers.
 
 #include <stdio.h>
 
-// Function name uses CamelCase as instructed
+
 int FindLargestElement(int arr[], int size) {
     int max_val = arr[0];
     
-    // Loop through array to compare elements
+
     for(int i = 1; i < size; i++) {
         if(arr[i] > max_val) {
-            max_val = arr[i]; // Update if a larger value is found
+            max_val = arr[i];
         }
     }
     return max_val;
