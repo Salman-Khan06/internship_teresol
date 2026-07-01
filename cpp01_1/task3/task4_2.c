@@ -1,35 +1,23 @@
-// Name: Salman Khan
-// Find the most frequent element in an array of integers.
-
-#include <stdio.h>
-
-int FindMostFrequent(int arr[], int size) {
-    int max_count = 0;
-    int most_frequent = arr[0];
-
-    // Nested loop to count occurrences of each element
-    for (int i = 0; i < size; i++) {
+#include<stdio.h>
+int M_fe(int arr[], int size){
+    int count = 0;
+    int m_f = arr[0];
+    for(int i=0; i<size; i++){
         int current_count = 0;
-        
-        for (int j = 0; j < size; j++) {
-            if (arr[i] == arr[j]) {
+        for(int j=0; j<size; j++){
+            if(arr[i] == arr[j]){
                 current_count++;
             }
         }
-        
-        
-        if (current_count > max_count) {
-            max_count = current_count;
-            most_frequent = arr[i];
+        if(current_count > count){
+            count = current_count;
+            m_f = arr[i];
         }
     }
-    return most_frequent;
+    return m_f;
 }
-
-int main() {
-    int input_array[] = {1, 3, 3, 3, 2, 3, 1, 3, 1, 2};
-    int array_size = sizeof(input_array) / sizeof(input_array[0]);
-
-    printf("Most frequent element is %d\n", FindMostFrequent(input_array, array_size));
-    return 0;
+int main(){
+    int input_array[]= {1,2,2,3,5,3,1,2,3,2,9,3,4,3,2,13,7,8,2,4,3};
+    int size = sizeof(input_array)/sizeof(input_array[0]);
+    printf("Most frequent element is %d\n",M_fe(input_array, size));
 }
